@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>if文</title>
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script>
+  $(function(){
+    // ここに処理を記述
+    let col=document.getElementById('value');
+    let btn=document.getElementById('button');
+    let colbox=document.getElementById('box');
+
+    btn.addEventListener("click",function(){
+
+      let colInt=parseInt(col.value);
+
+      if(colInt===1){
+        colbox.style.backgroundColor="red";
+      }
+      else if(colInt===2){
+        colbox.style.backgroundColor="lime";
+      }
+      else if(colInt===3){
+        colbox.style.backgroundColor="blue";
+      }
+    })
+  });
+  </script>
+</head>
+<body>
+  <input type="text" id="value">
+  <input type="button" id="button" value="ボタン">
+  <div id="box">
+  </div><!-- button -->
+</body>
+</html>
