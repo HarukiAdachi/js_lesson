@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>クリックイベントと切り替え</title>
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script>
+  $(function(){
+    // ここに処理を記述
+    let oNoFF=0;
+
+    let first=document.getElementById('button1')
+    let second=document.getElementById('button2')
+    let third=document.getElementById('button3')
+
+
+    first.addEventListener('click',function(){
+      first.style.backgroundColor='red';
+      oNoFF=1;
+      updateChange();
+    });
+    second.addEventListener('click',function(){
+      second.style.backgroundColor='red';
+      oNoFF=2;
+      updateChange();
+    });
+    third.addEventListener('click',function(){
+      third.style.backgroundColor='red';
+      oNoFF=3;
+      updateChange();
+    });
+
+    function updateChange(){
+      if(oNoFF!==1){
+      first.style.backgroundColor='#fdd';
+    }
+      if(oNoFF!==2){
+      second.style.backgroundColor='#fdd';
+    }
+      if(oNoFF!==3){
+      third.style.backgroundColor='#fdd';
+    }
+    }
+
+  });
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="button1" class="button">
+      <p>button1</p>
+    </div><!-- button1 -->
+    <div id="button2" class="button">
+      <p>button2</p>
+    </div><!-- button2 -->
+    <div id="button3" class="button">
+      <p>button3</p>
+    </div><!-- button3 -->
+  </div><!-- wrapper -->
+</body>
+</html>
